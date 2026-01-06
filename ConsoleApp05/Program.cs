@@ -26,5 +26,4 @@ namespace ConsoleApp05
         Autumn = 3,
         Winter = 4,
     }
-    enum Day1fWeek { }
 }

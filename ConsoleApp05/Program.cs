@@ -8,22 +8,34 @@ namespace ConsoleApp05
 {
     internal class Program
     {
-        static void Main(string[] args) //課題32-13
-        { }
-            enum Day0fWeek {
-            Sunday, //0
-            Monday, //1
-            Tuesday, //2
-            Wednesday, //3
-            Thursday, //4
-            Friday, //5
-            Saturday, //6
+        //課題32-13
+        //以下を挙列型で宣言し、foreachを使用してコンソールに出力してください。
+        //「Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday」
+
+        enum Days
+        {
+            Sunday = 0,
+            Monday = 1,
+            Tuesday = 2,
+            Wednesday = 3,
+            Thursday = 4,
+            Friday = 5,
+            Saturday = 6
+        }
+        class Sample
+        {
+            static void Main()
+            {
+                foreach (Days Value in Enum.GetValues(typeof(Days)))
+                {
+                    string name = Enum.GetName(typeof(Days), Value);
+
+                    Console.WriteLine("{0}：{1}", name, (int)Value);
+                }
+
+                Console.ReadKey();
+
             }
         }
-    enum Season{
-        Spring = 1,
-        Summer = 2,
-        Autumn = 3,
-        Winter = 4,
     }
 }

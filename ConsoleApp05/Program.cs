@@ -22,9 +22,8 @@ namespace ConsoleApp05
             Friday = 5,
             Saturday = 6
         }
-        class Sample
-        {
-            static void Main()
+
+            static void Main(string[] args)
             {
                 foreach (Days Value in Enum.GetValues(typeof(Days)))
                 {
@@ -38,4 +37,4 @@ namespace ConsoleApp05
             }
         }
     }
-}
+
